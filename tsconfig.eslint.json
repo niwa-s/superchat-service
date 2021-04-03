@@ -1,13 +1,7 @@
 {
     "extends": "./tsconfig.json",
     "includes": [
-        "pages/**/*.ts",
-        "pages/**/*.tsx",
-        "api/**/*.ts",
-        "components/**/*.tsx",
-        "interfaces/**/*.ts",
-        "utils/**/*.ts",
-        ".eslintrc.json"
+        "src/**/*.{ts,tsx}"
     ],
     "exclude": [
         "node_modules",
