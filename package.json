@@ -5,11 +5,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky install",
     "type-check": "tsc",
     "check-types": "tsc --noEmit",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
-    "test-all": "npx yarn-run-all lint check-types lint:fix"
+    "test-all": "npx yarn-run-all lint check-types lint:fix format",
+    "format": "prettier --write"
   },
   "dependencies": {
     "next": "latest",
@@ -23,8 +25,19 @@
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
     "eslint": "^7.23.0",
+    "eslint-config-prettier": "8.1.0",
     "eslint-plugin-react": "^7.23.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "2.2.1",
     "typescript": "^4.2.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format",
+      "yarn lint:fix"
+    ]
+  }
 }

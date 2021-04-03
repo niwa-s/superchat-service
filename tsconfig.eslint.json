@@ -1,8 +1,12 @@
 {
     "extends": "./tsconfig.json",
     "includes": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
+        "pages/**/*.ts",
+        "pages/**/*.tsx",
+        "api/**/*.ts",
+        "components/**/*.tsx",
+        "interfaces/**/*.ts",
+        "utils/**/*.ts",
         ".eslintrc.json"
     ],
     "exclude": [

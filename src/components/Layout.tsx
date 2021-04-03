@@ -7,6 +7,7 @@ type Props = {
   title?: string
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
   <div>
     <Head>
@@ -33,7 +34,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     {children}
     <footer>
       <hr />
-      <span>I'm here to stay (Footer)</span>
+      <span>{"I'm here to stay (Footer)"}</span>
     </footer>
   </div>
 )

@@ -6,6 +6,7 @@ type Props = {
   items: User[]
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const List = ({ items }: Props) => (
   <ul>
     {items.map((item) => (
