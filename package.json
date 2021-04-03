@@ -8,6 +8,7 @@
     "prepare": "husky install",
     "type-check": "tsc",
     "check-types": "tsc --noEmit",
+    "eslint": "eslint",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
     "test-all": "npx yarn-run-all lint check-types lint:fix format",
